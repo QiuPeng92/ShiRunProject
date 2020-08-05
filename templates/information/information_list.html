@@ -1,0 +1,242 @@
+{% extends "base.html" %}
+{% block information_active %}
+    class="active"
+{% endblock %}
+{% block treeview2 %}
+    active
+{% endblock %}
+
+{% block content %}
+    {% if no_mileage %}
+        <div class="content-wrapper small" role="alert">
+            <section class="content-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="jumbotron" style="background-color: palevioletred">
+                                <h3>{{ no_mileage }}</h3>
+                                {% if request.user.username == "admin" or request.user.username == "admin2" %}
+                                    <p>是否前往加油站油库里程信息表?</p>
+                                    <p><a class="btn btn-primary btn-lg" href="/petrolstation2oilwarehouse/add/"
+                                          role="button">前往</a></p>
+                                {% else %}
+                                    <p>请联系管理员进行添加数据!</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    {% elif no_shortmileage_standard %}
+        <div class="content-wrapper small" role="alert">
+            <section class="content-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="jumbotron" style="background-color: palevioletred">
+                                <h3>{{ no_shortmileage_standard }}</h3>
+                                <p>是否前往客户里程信息表?</p>
+                                <p><a class="btn btn-primary btn-lg" href="/customer2mileage/add/"
+                                      role="button">前往</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    {% else %}
+        <div class="content-wrapper small">
+            <section class="content-header">
+
+                <h1>
+                    信息列表
+                    <small>(注: 改变维护数据会对信息列表数据产生影响,但不会影响审批后的数据)</small>
+                </h1>
+
+
+                <ol class="breadcrumb">
+                    <li><a href="/"><i class="fa fa-th-list"></i> 首页</a></li>
+                    <li><a href="{% url 'information_list' %}">信息列表</a></li>
+                </ol>
+                <!-- 模糊查询的form表单  -->
+                <form action="" method="get" class="pull-right">
+                    <ol class="breadcrumb">
+                        <select name="field" id="s1" class="form-control" style="display: inline-block;width: 110px">
+                            <option value="deliver_time">配送时间</option>
+                            <option value="car_name">车号</option>
+                            <option value="outside_number">外部编号</option>
+                            <option value="inside_number">内部编号</option>
+                            <option value="driver_name">驾驶员</option>
+                            <option value="supercargo_name">押运员</option>
+                            <option value="customer_name">发货单位</option>
+                            <option value="audit_status">审核状态</option>
+                        </select>
+                        <input class="form-control" style="display: inline-block;width: 200px" type="text" name="q"
+                               placeholder="搜索">
+                        <button style="vertical-align: 0px" class="btn btn-success">搜索</button>
+                    </ol>
+                </form>
+
+
+            </section>
+
+            <!-- action批量处理的form表单  -->
+            <form action="" method="post">
+                {% csrf_token %}
+
+                <!-- Main content -->
+                <section class="content">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="box">
+                                <div class="box-header">
+                                    <div class="col-md-2 pull-right">
+                                        <a href="/export_imformation/?field={{ field }}&q={{ q }}"
+                                           class="btn btn-info pull-right"><i
+                                                class="fa fa-file-excel-o"
+                                                aria-hidden="true"></i> 导出Excel
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+
+                                    <table id="example2" class="text-center table table-bordered table-hover">
+                                        <thead>
+                                        <tr class="danger">
+                                            <th>编号</th>
+                                            <th>内部编号</th>
+                                            <th>外部编号</th>
+                                            <th>发货单位</th>
+                                            <th>配送时间</th>
+                                            <th>车号</th>
+                                            <th>驾驶员</th>
+                                            <th>押运员</th>
+                                            <th>发货油库</th>
+                                            <th>收货单位</th>
+                                            <th>油品</th>
+                                            <th>车次</th>
+                                            <th>车舱编号</th>
+                                            <th>支付金额</th>
+                                            <th>实发量</th>
+                                            <th>审核状态</th>
+                                            <th>审核人</th>
+                                            <th>备注</th>
+                                            <th>操作</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        {% for information in information_list %}
+                                            <tr>
+                                                <td>{{ forloop.counter }}</td>
+                                                <td>{{ information.inside_number|default:"暂无" }}</td>
+                                                <td>{{ information.outside_number|default:"暂无" }}</td>
+                                                <td>{{ information.customer.name }}</td>
+                                                <td>{{ information.deliver_time |date:"Y-m-d" }}</td>
+                                                <td>{{ information.car.name }}</td>
+                                                <td>{{ information.car.driver }}</td>
+                                                <td>{{ information.car.supercargo }}</td>
+                                                <td>{{ information.oilwarehouse.name }}</td>
+                                                <td>{{ information.petrolstation.name }}</td>
+                                                <td>{{ information.oil.name }}</td>
+                                                <td>{{ information.get_drive_number_display }}</td>
+                                                <td>{{ information.get_cabin_display }}</td>
+                                                <td>{{ information.price|default:"暂无" }}</td>
+                                                <td>{{ information.paid_in_number }}</td>
+                                                <td>{{ information.get_status }}</td>
+                                                <td>{{ information.auditor|default:"暂无" }}</td>
+                                                <td>{{ information.remark|default:"暂无" }}</td>
+                                                <td>
+                                                    <a href=""
+                                                       data-toggle="modal"
+                                                       data-target="#myModal2{{ information.pk }}"
+                                                    ><i class="fa fa-file-text fa-lg" aria-hidden="true"></i></a>&nbsp;|&nbsp;
+                                                    <a href="{% url 'information_edit' information.id %}?page={{ page_num }}&field={{ field }}&q={{ q }}"
+                                                    ><i class="fa fa-edit fa-lg" aria-hidden="true"></i></a>&nbsp;|&nbsp;
+                                                    <a href="" data-toggle="modal"
+                                                       data-target="#myModal{{ information.pk }}"><i
+                                                            class="fa fa-trash-o fa-lg"></i></a>
+                                                    <!-- 删除模态框 -->
+                                                    <div class="modal fade" id="myModal{{ information.pk }}"
+                                                         tabindex="-1"
+                                                         role="dialog"
+                                                         aria-labelledby="myModalLabel">
+                                                        <div class="modal-dialog modal-sm" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close"
+                                                                            data-dismiss="modal"
+                                                                            aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                    <h4 class="modal-title" id="myModalLabel">确认删除?</h4>
+                                                                </div>
+                                                                <div class="modal-body">
+
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-default"
+                                                                            data-dismiss="modal">关闭
+                                                                    </button>
+                                                                    <a type="button" class="btn btn-primary"
+                                                                       href="{% url 'information_delete' information.id %}?page={{ page_num }}">确认
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- 审核模态框 -->
+                                                    <div class="modal fade" id="myModal2{{ information.pk }}"
+                                                         tabindex="-1"
+                                                         role="dialog"
+                                                         aria-labelledby="myModalLabel">
+                                                        <div class="modal-dialog modal-sm" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close"
+                                                                            data-dismiss="modal"
+                                                                            aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                    <h4 class="modal-title" id="myModalLabel">确认审核?</h4>
+                                                                </div>
+                                                                <div class="modal-body">
+
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-default"
+                                                                            data-dismiss="modal">关闭
+                                                                    </button>
+                                                                    <a type="button" class="btn btn-primary"
+                                                                       href="{% url 'information_audit' information.id %}?page={{ page_num }}&field={{ field }}&q={{ q }}">确认
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+
+
+                                    <nav aria-label="Page navigation" class="pull-right">
+                                        <ul class="pagination">
+                                            {{ pagination.page_html|safe }}
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </form>
+        </div>
+    {% endif %}
+
+{% endblock %}
+

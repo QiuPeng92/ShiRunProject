@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="68503142-b928-43e3-9509-0f49b2e4b7ad" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/ShiRunProject$test.coverage" NAME="test Coverage Results" MODIFIED="1579151677216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="shirun@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="shirun@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="shirun@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="shirun: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/salary/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="302">
+              <caret line="4376" column="13" lean-forward="true" selection-start-line="4376" selection-start-column="13" selection-end-line="4376" selection-end-column="13" />
+              <folding>
+                <element signature="e#21#89#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/salary/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2656">
+              <caret line="170" column="34" selection-start-line="170" selection-start-column="34" selection-end-line="170" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ShiRunProject/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2384">
+              <caret line="156" column="77" selection-start-line="156" selection-start-column="77" selection-end-line="156" selection-end-column="77" />
+              <folding>
+                <element signature="e#637#669#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/petrolstation12/petrolstation12_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="704">
+              <caret line="44" column="68" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>request</find>
+      <find>shortmileage_price</find>
+      <find>unique_tog</find>
+      <find>clean</find>
+      <find>前往</find>
+      <find>没有对应的客户里程</find>
+      <find>oiltank_number_list</find>
+      <find>oiltank_number</find>
+      <find>earning</find>
+      <find>long_price</find>
+      <find>username</find>
+      <find>手机</find>
+      <find>信息列表</find>
+      <find>information</find>
+      <find>models.Information.objects</find>
+      <find>.order_by(&quot;-deliver_time&quot;, &quot;car&quot;, &quot;drive_number&quot;, &quot;cabin&quot;)</find>
+      <find>.order_by(&quot;-deliver_time&quot;,&quot;car_name&quot;,&quot;drive_number&quot;,&quot;cabin&quot;)</find>
+      <find>审批</find>
+      <find>information_list</find>
+      <find>运费</find>
+      <find>customer_mileage</find>
+      <find>工资</find>
+      <find>吨的车</find>
+      <find>17-18</find>
+      <find>审核</find>
+      <find>导出运费</find>
+      <find>start_time_str</find>
+      <find>加油站列表</find>
+      <find>导出</find>
+      <find>导出信息</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/templates/petrolstation/add_petrolstation.html" />
+        <option value="$PROJECT_DIR$/templates/customer2mileage/add_customer2mileage.html" />
+        <option value="$PROJECT_DIR$/templates/petrolstation12/add_petrolstation12.html" />
+        <option value="$PROJECT_DIR$/templates/petrolstation12/edit_petrolstation12.html" />
+        <option value="$PROJECT_DIR$/templates/petrolstation30/add_petrolstation30.html" />
+        <option value="$PROJECT_DIR$/templates/petrolstation30/edit_petrolstation30.html" />
+        <option value="$PROJECT_DIR$/templates/cartype/add_car_type.html" />
+        <option value="$PROJECT_DIR$/templates/cartype/edit_car_type.html" />
+        <option value="$PROJECT_DIR$/templates/information/edit_information.html" />
+        <option value="$PROJECT_DIR$/salary/templatetags/extra_tags.py" />
+        <option value="$PROJECT_DIR$/templates/settlement/orderstatistics.html" />
+        <option value="$PROJECT_DIR$/templates/phone_error.html" />
+        <option value="$PROJECT_DIR$/templates/userinfo/add_userinfo.html" />
+        <option value="$PROJECT_DIR$/templates/userinfo/edit_userinfo.html" />
+        <option value="$PROJECT_DIR$/templates/earning/earning_list.html" />
+        <option value="$PROJECT_DIR$/templates/userinfo/userinfo_list.html" />
+        <option value="$PROJECT_DIR$/templates/customer/customer_list.html" />
+        <option value="$PROJECT_DIR$/templates/oil/oil_list.html" />
+        <option value="$PROJECT_DIR$/templates/oilwarehouse/oilwarehouse_list.html" />
+        <option value="$PROJECT_DIR$/templates/petrolstation30/petrolstation30_list.html" />
+        <option value="$PROJECT_DIR$/templates/customer2mileage/customer2mileage_list.html" />
+        <option value="$PROJECT_DIR$/templates/information/orderstatistics.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/cartype/car_type_list.html" />
+        <option value="$PROJECT_DIR$/templates/freight.html" />
+        <option value="$PROJECT_DIR$/templates/month_salary/driver_month_salary.html" />
+        <option value="$PROJECT_DIR$/templates/month_salary/supercargo_month_salary.html" />
+        <option value="$PROJECT_DIR$/templates/car/car_list.html" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/templates/month_work_days.html" />
+        <option value="$PROJECT_DIR$/salary/utils/page.py" />
+        <option value="$PROJECT_DIR$/templates/month_work_days/supercargo_month_work_days.html" />
+        <option value="$PROJECT_DIR$/templates/month_work_days/driver_month_work_days.html" />
+        <option value="$PROJECT_DIR$/ShiRunProject/settings.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/templates/petrolstation2oilwarehouse/add_petrolstation2oilwarehouse.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/salary/admin.py" />
+        <option value="$PROJECT_DIR$/templates/phone_index.html" />
+        <option value="$PROJECT_DIR$/templates/phone_information.html" />
+        <option value="$PROJECT_DIR$/templates/phone_information_audit.html" />
+        <option value="$PROJECT_DIR$/salary/forms.py" />
+        <option value="$PROJECT_DIR$/templates/earning/earning_list_distinct.html" />
+        <option value="$PROJECT_DIR$/salary/models.py" />
+        <option value="$PROJECT_DIR$/templates/settlement/settlement_list.html" />
+        <option value="$PROJECT_DIR$/templates/information/information_list.html" />
+        <option value="$PROJECT_DIR$/templates/petrolstation/petrolstation_list.html" />
+        <option value="$PROJECT_DIR$/templates/petrolstation2oilwarehouse/petrolstation2oilwarehouse_list.html" />
+        <option value="$PROJECT_DIR$/templates/petrolstation12/petrolstation12_list.html" />
+        <option value="$PROJECT_DIR$/ShiRunProject/urls.py" />
+        <option value="$PROJECT_DIR$/salary/views.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="552" />
+    <option name="y" value="56" />
+    <option name="width" value="1250" />
+    <option name="height" value="948" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ShiRunProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ShiRunProject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ShiRunProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ShiRunProject" type="462c0819:PsiDirectoryNode" />
+              <item name="salary" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ShiRunProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ShiRunProject" type="462c0819:PsiDirectoryNode" />
+              <item name="ShiRunProject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ShiRunProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ShiRunProject" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ShiRunProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ShiRunProject" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="information" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ShiRunProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ShiRunProject" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="petrolstation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ShiRunProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ShiRunProject" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="petrolstation2oilwarehouse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ShiRunProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ShiRunProject" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="petrolstation12" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="derby&#10;mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="D:/test/lufei/lufei_city" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\study\2020.1.17_new\ShiRunProject\static" />
+      <recent name="D:\test\2020.1.16\ShiRunProject\templates\month_work_days" />
+      <recent name="D:\test\2020.1.15\ShiRunProject\templates\month_salary" />
+      <recent name="D:\study\2019.12.31\ShiRunProject\templates" />
+      <recent name="D:\study\2019.12.18\ShiRunProject\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\study\ShiRunProject\templates" />
+      <recent name="D:\study\ShiRunProject\templates\information" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Django server.ShiRunProject">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python">
+      <module name="ShiRunProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ShiRunProject" type="Python.DjangoServer" factoryName="Django server">
+      <module name="ShiRunProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="ShiRunProject.settings" />
+      </envs>
+      <option name="SDK_HOME" value="D:\python\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8002" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django server.ShiRunProject" />
+      <item itemvalue="Python.test" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="68503142-b928-43e3-9509-0f49b2e4b7ad" name="Default Changelist" comment="" />
+      <created>1574585319474</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574585319474</updated>
+      <workItem from="1574585322936" duration="6380000" />
+      <workItem from="1574599072606" duration="8545000" />
+      <workItem from="1574693264455" duration="5444000" />
+      <workItem from="1574770955127" duration="10138000" />
+      <workItem from="1574936980247" duration="14119000" />
+      <workItem from="1575036501379" duration="399000" />
+      <workItem from="1575083845917" duration="7279000" />
+      <workItem from="1575253008310" duration="19992000" />
+      <workItem from="1575284186748" duration="14840000" />
+      <workItem from="1575374672212" duration="14273000" />
+      <workItem from="1575420699798" duration="22385000" />
+      <workItem from="1575463427622" duration="13429000" />
+      <workItem from="1575506410726" duration="12618000" />
+      <workItem from="1575525033357" duration="2073000" />
+      <workItem from="1575527164855" duration="1645000" />
+      <workItem from="1575539429241" duration="13005000" />
+      <workItem from="1575689920548" duration="3344000" />
+      <workItem from="1575784782387" duration="20669000" />
+      <workItem from="1575809999806" duration="5043000" />
+      <workItem from="1575977559992" duration="11497000" />
+      <workItem from="1575989951143" duration="6073000" />
+      <workItem from="1575996816718" duration="485000" />
+      <workItem from="1576150444157" duration="11991000" />
+      <workItem from="1576308183910" duration="8748000" />
+      <workItem from="1576338226254" duration="6614000" />
+      <workItem from="1576392353390" duration="78000" />
+      <workItem from="1576392610741" duration="1208000" />
+      <workItem from="1576393854655" duration="105000" />
+      <workItem from="1576393981424" duration="109000" />
+      <workItem from="1576394924536" duration="7811000" />
+      <workItem from="1576461429235" duration="15815000" />
+      <workItem from="1576491780274" duration="16264000" />
+      <workItem from="1576577043322" duration="1441000" />
+      <workItem from="1576594026685" duration="591000" />
+      <workItem from="1576632354913" duration="21567000" />
+      <workItem from="1576668381452" duration="275000" />
+      <workItem from="1576668682190" duration="9916000" />
+      <workItem from="1576678712348" duration="201000" />
+      <workItem from="1576679063443" duration="3959000" />
+      <workItem from="1576755200244" duration="13069000" />
+      <workItem from="1576907968198" duration="8106000" />
+      <workItem from="1576931496629" duration="18359000" />
+      <workItem from="1577104335669" duration="10298000" />
+      <workItem from="1577185691683" duration="6072000" />
+      <workItem from="1577199865211" duration="35000" />
+      <workItem from="1577200044563" duration="2546000" />
+      <workItem from="1577202738031" duration="261000" />
+      <workItem from="1577236764653" duration="21544000" />
+      <workItem from="1577259766622" duration="3484000" />
+      <workItem from="1577274299020" duration="292000" />
+      <workItem from="1577354082240" duration="10576000" />
+      <workItem from="1577372295580" duration="225000" />
+      <workItem from="1577686183049" duration="12645000" />
+      <workItem from="1577766532086" duration="632000" />
+      <workItem from="1577798968963" duration="4565000" />
+      <workItem from="1577805074344" duration="1308000" />
+      <workItem from="1578574122506" duration="3585000" />
+      <workItem from="1578584003643" duration="3808000" />
+      <workItem from="1578747447263" duration="2435000" />
+      <workItem from="1579008976343" duration="10177000" />
+      <workItem from="1579049568483" duration="27257000" />
+      <workItem from="1579089416199" duration="5035000" />
+      <workItem from="1579099695960" duration="1571000" />
+      <workItem from="1579136839187" duration="21088000" />
+      <workItem from="1579171331579" duration="35000" />
+      <workItem from="1579222914581" duration="2042000" />
+      <workItem from="1579444845826" duration="226000" />
+      <workItem from="1579514343681" duration="4950000" />
+      <workItem from="1579693313365" duration="2421000" />
+      <workItem from="1579846513280" duration="2509000" />
+      <workItem from="1579921396153" duration="1226000" />
+      <workItem from="1580038573386" duration="803000" />
+      <workItem from="1580186036520" duration="590000" />
+      <workItem from="1580211183950" duration="607000" />
+      <workItem from="1580263979931" duration="591000" />
+      <workItem from="1580285044523" duration="3950000" />
+      <workItem from="1580301289543" duration="843000" />
+      <workItem from="1580350409573" duration="2805000" />
+      <workItem from="1580439225957" duration="592000" />
+      <workItem from="1580535087052" duration="591000" />
+      <workItem from="1580690508058" duration="12750000" />
+      <workItem from="1580729551041" duration="842000" />
+      <workItem from="1580791325791" duration="596000" />
+      <workItem from="1581042190141" duration="2753000" />
+      <workItem from="1581130514428" duration="1807000" />
+      <workItem from="1581212407576" duration="599000" />
+      <workItem from="1581254846497" duration="2188000" />
+      <workItem from="1581400818594" duration="594000" />
+      <workItem from="1581498460697" duration="673000" />
+      <workItem from="1581573231487" duration="594000" />
+      <workItem from="1581661130552" duration="597000" />
+      <workItem from="1581741805432" duration="596000" />
+      <workItem from="1581856291453" duration="590000" />
+      <workItem from="1581918209964" duration="595000" />
+      <workItem from="1582006871776" duration="1199000" />
+      <workItem from="1582115534606" duration="599000" />
+      <workItem from="1582176989340" duration="10425000" />
+      <workItem from="1582219579034" duration="2207000" />
+      <workItem from="1582258676498" duration="7002000" />
+      <workItem from="1582399724540" duration="228000" />
+      <workItem from="1582427835350" duration="5676000" />
+      <workItem from="1582545345048" duration="598000" />
+      <workItem from="1582626500731" duration="597000" />
+      <workItem from="1582713662264" duration="5751000" />
+      <workItem from="1582798986805" duration="597000" />
+      <workItem from="1582889150388" duration="568000" />
+      <workItem from="1582951446634" duration="597000" />
+      <workItem from="1583033726504" duration="598000" />
+      <workItem from="1583155150944" duration="4394000" />
+      <workItem from="1583229389189" duration="14739000" />
+      <workItem from="1583404640959" duration="1783000" />
+      <workItem from="1583492524117" duration="608000" />
+      <workItem from="1583557475234" duration="1206000" />
+      <workItem from="1583669913357" duration="596000" />
+      <workItem from="1583673862284" duration="1041000" />
+      <workItem from="1583750759197" duration="607000" />
+      <workItem from="1583751716999" duration="3125000" />
+      <workItem from="1583834727676" duration="597000" />
+      <workItem from="1583921042940" duration="596000" />
+      <workItem from="1584017382924" duration="1407000" />
+      <workItem from="1584019121120" duration="734000" />
+      <workItem from="1584156572852" duration="1328000" />
+      <workItem from="1584171374271" duration="589000" />
+      <workItem from="1584179857820" duration="612000" />
+      <workItem from="1584243877963" duration="598000" />
+      <workItem from="1584257172243" duration="596000" />
+      <workItem from="1584355264727" duration="597000" />
+      <workItem from="1584445670972" duration="835000" />
+      <workItem from="1584529146805" duration="6010000" />
+      <workItem from="1584632103755" duration="2019000" />
+      <workItem from="1585303684899" duration="7002000" />
+      <workItem from="1585574804927" duration="614000" />
+      <workItem from="1585738282475" duration="2743000" />
+      <workItem from="1586182257630" duration="1224000" />
+      <workItem from="1586350758763" duration="599000" />
+      <workItem from="1586948583751" duration="599000" />
+      <workItem from="1587379648099" duration="598000" />
+      <workItem from="1587468301045" duration="597000" />
+      <workItem from="1587552152237" duration="12445000" />
+      <workItem from="1587642045172" duration="4683000" />
+      <workItem from="1587904173980" duration="8619000" />
+      <workItem from="1587994926004" duration="6160000" />
+      <workItem from="1588040114868" duration="1396000" />
+      <workItem from="1588080027704" duration="599000" />
+      <workItem from="1588494150872" duration="598000" />
+      <workItem from="1588687725738" duration="598000" />
+      <workItem from="1588742849061" duration="597000" />
+      <workItem from="1588761297922" duration="597000" />
+      <workItem from="1588812029296" duration="598000" />
+      <workItem from="1588858490649" duration="598000" />
+      <workItem from="1588898963051" duration="598000" />
+      <workItem from="1588933406437" duration="597000" />
+      <workItem from="1588986440693" duration="597000" />
+      <workItem from="1588999288767" duration="597000" />
+      <workItem from="1589174195418" duration="598000" />
+      <workItem from="1589200823476" duration="599000" />
+      <workItem from="1589254521929" duration="599000" />
+      <workItem from="1589543536595" duration="599000" />
+      <workItem from="1589696978221" duration="1198000" />
+      <workItem from="1589806094075" duration="597000" />
+      <workItem from="1589897997467" duration="596000" />
+      <workItem from="1589976312157" duration="599000" />
+      <workItem from="1590070981009" duration="598000" />
+      <workItem from="1590152994303" duration="596000" />
+      <workItem from="1590235317662" duration="598000" />
+      <workItem from="1590295344152" duration="597000" />
+      <workItem from="1590304808442" duration="597000" />
+      <workItem from="1590585510860" duration="598000" />
+      <workItem from="1590676288914" duration="598000" />
+      <workItem from="1590931001964" duration="599000" />
+      <workItem from="1591015109126" duration="598000" />
+      <workItem from="1592234614930" duration="598000" />
+      <workItem from="1592317862312" duration="590000" />
+      <workItem from="1592402946296" duration="597000" />
+      <workItem from="1592493025818" duration="590000" />
+      <workItem from="1592566945069" duration="593000" />
+      <workItem from="1592650786607" duration="592000" />
+      <workItem from="1592704563715" duration="587000" />
+      <workItem from="1592824982959" duration="591000" />
+      <workItem from="1593074371492" duration="592000" />
+      <workItem from="1593132656063" duration="598000" />
+      <workItem from="1593217472621" duration="591000" />
+      <workItem from="1593268212568" duration="588000" />
+      <workItem from="1593344244213" duration="591000" />
+      <workItem from="1593781175396" duration="594000" />
+      <workItem from="1594209815044" duration="598000" />
+      <workItem from="1596280389825" duration="3071000" />
+      <workItem from="1596338747892" duration="595000" />
+      <workItem from="1596628149067" duration="324000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="718656000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49659863" visible="true" weight="0.17426273" />
+      <window_info id="Structure" order="1" sideWeight="0.50340134" side_tool="true" weight="0.23524962" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2616959" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.30409357" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32944608" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Console" order="10" weight="0.16228071" />
+      <window_info anchor="bottom" id="manage.py@ShiRunProject" order="11" weight="0.2119883" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.17397662" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="14" weight="0.32748538" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.034852546" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="das://49e01582-a79e-42d4-b7ac-e85ebcbecd39/schema/shirun/table/auth_permission" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/82dd5d1b-5986-4272-866d-f387b8011bab/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cc688463-ff1e-4713-bd40-078474d9b52c/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/salary/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="282" column="10" selection-start-line="282" selection-start-column="10" selection-end-line="282" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6d1da7ac-c9ee-4d99-aad1-2cf0788aee86/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e1c19d70-08d7-41ea-81a9-79f5060705e8/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/phone_login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-882" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="50" column="38" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://6c4eb513-9b7c-44a6-8ed3-1a146dba5c3c/schema/shirun/table/salary_userinfo">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6c4eb513-9b7c-44a6-8ed3-1a146dba5c3c/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/salary/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rbac/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python/Lib/site-packages/django/db/models/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="1107" column="20" selection-start-line="1107" selection-start-column="10" selection-end-line="1107" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://6c4eb513-9b7c-44a6-8ed3-1a146dba5c3c/schema/shirun/table/salary_petrolstation2oilwarehouse">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/petrolstation2oilwarehouse/edit_petrolstation2oilwarehouse.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="34" column="56" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
+          <folding>
+            <element signature="e#1163#1182#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/petrolstation2oilwarehouse/add_petrolstation2oilwarehouse.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://6c4eb513-9b7c-44a6-8ed3-1a146dba5c3c/schema/shirun/table/salary_car">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://6c4eb513-9b7c-44a6-8ed3-1a146dba5c3c/schema/shirun/table/salary_petrolstation12">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://6c4eb513-9b7c-44a6-8ed3-1a146dba5c3c/schema/shirun/table/salary_petrolstation30">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://6c4eb513-9b7c-44a6-8ed3-1a146dba5c3c/schema/shirun/table/salary_customer">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/audit_faild.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/customer2mileage/customer2mileage_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-596">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://6c4eb513-9b7c-44a6-8ed3-1a146dba5c3c/schema/shirun/table/salary_staticinformation">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python/Lib/site-packages/django/contrib/admin/options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="537" column="6" selection-start-line="537" selection-start-column="6" selection-end-line="537" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/salary/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/phone_submit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/phone_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="55" column="10" lean-forward="true" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#4;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/month_salary/driver_month_salary.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="63" column="53" lean-forward="true" selection-start-line="63" selection-start-column="53" selection-end-line="63" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/month_salary/supercargo_month_salary.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="66" column="44" lean-forward="true" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/-287100998/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="2822" column="8" selection-start-line="2822" selection-start-column="8" selection-end-line="2822" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/month_work_days/supercargo_month_work_days.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="68" column="55" lean-forward="true" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/phone_information.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-43">
+          <caret line="58" column="49" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/phone_information_audit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="58" column="49" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/salary/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5488">
+          <caret line="346" column="26" selection-start-line="346" selection-start-column="26" selection-end-line="346" selection-end-column="26" />
+          <folding>
+            <element signature="e#20#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2688">
+          <caret line="168" column="66" selection-start-line="168" selection-start-column="66" selection-end-line="168" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python/Lib/site-packages/django/db/models/query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="732" column="8" selection-start-line="732" selection-start-column="8" selection-end-line="732" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/earning/earning_list_distinct.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1184">
+          <caret line="74" column="33" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/salary/utils/page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShiRunProject/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2176">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/earning/earning_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="24" column="51" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/settlement/settlement_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://6c4eb513-9b7c-44a6-8ed3-1a146dba5c3c/schema/shirun/table/salary_information">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://6c4eb513-9b7c-44a6-8ed3-1a146dba5c3c/schema/shirun/table/salary_petrolstation">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/information/information_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="90" column="37" lean-forward="true" selection-start-line="90" selection-start-column="37" selection-end-line="90" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/petrolstation/petrolstation_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/petrolstation2oilwarehouse/petrolstation2oilwarehouse_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="54" column="38" lean-forward="true" selection-start-line="48" selection-start-column="32" selection-end-line="54" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/salary/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="4376" column="13" lean-forward="true" selection-start-line="4376" selection-start-column="13" selection-end-line="4376" selection-end-column="13" />
+          <folding>
+            <element signature="e#21#89#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/salary/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2656">
+          <caret line="170" column="34" selection-start-line="170" selection-start-column="34" selection-end-line="170" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShiRunProject/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2384">
+          <caret line="156" column="77" selection-start-line="156" selection-start-column="77" selection-end-line="156" selection-end-column="77" />
+          <folding>
+            <element signature="e#637#669#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/petrolstation12/petrolstation12_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="44" column="68" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block treeview3 %}
+    active
+{% endblock %}
+{% block content %}
+    <div class="content-wrapper small">
+        <section class="content-header">
+            <h3>首页</h3>
+        </section>
+        <!-- action批量处理的form表单  -->
+        <form action="" method="post">
+            {% csrf_token %}
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="box-title">
+                                    {{ content }}
+                                </h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <div id="container" style="min-width:400px;height:400px"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </form>
+    </div>
+{% endblock %}
+{% block highcharts %}
+    <script src="/static/highcharts/highcharts.js"></script>
+    <script>
+        var chart = Highcharts.chart('container', {
+            chart: {
+                type: 'line'
+            },
+            title: {
+                text: '今年-去年 月下单量'
+            },
+            subtitle: {
+                text: '数据来源: 施润集团(注释:一仓为一单)'
+            },
+            xAxis: {
+                categories: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
+            },
+            yAxis: {
+                title: {
+                    text: '下单量'
+                }
+            },
+            plotOptions: {
+                line: {
+                    dataLabels: {
+                        // 开启数据标签
+                        enabled: true
+                    },
+                    // 关闭鼠标跟踪，对应的提示框、点击事件会失效
+                    enableMouseTracking: false
+                }
+            },
+            series: [{
+                name: '今年',
+                data: {{ result_thisyear }}
+            }, {
+                name: '去年',
+                data: {{ result_lastyear }}
+            }]
+        });
+
+    </script>
+
+{% endblock %}

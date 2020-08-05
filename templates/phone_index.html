@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    {#    <link rel="icon" href="https://v3.bootcss.com/favicon.ico">#}
+    {% load staticfiles %}
+    <link rel="icon" href="{% static "image/2.ico" %}" type="image/x-icon">
+    <title>施润集团</title>
+    {% load static %}
+    <!-- Bootstrap core CSS -->
+    <link href="{% static "bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static "dashboard.css" %}" rel="stylesheet">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-select.min.css">
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-header">
+                    <img alt="Brand" src="{% static "image/2.ico" %}">
+                    <h4>施润集团油料配送管理系统---配送单 </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<form action="" method="post" novalidate>
+    {% csrf_token %}
+    <div class="form-group col-sm-10">
+        <label for="inside_number">登录账号：{{ request.user.username }}</label>
+    </div>
+    <div class="form-group col-sm-10">
+        <label for="inside_number">查看今日已填写信息：</label>
+        <a class="btn btn-danger btn-sm" href="/phone/information/">查看</a>
+    </div>
+    <div class="form-group col-sm-10">
+        <label for="inside_number">查看今日已审批信息：</label>
+        <a class="btn btn-danger btn-sm" href="/phone/information_audit/">查看</a>
+    </div>
+    <div class="form-group col-sm-10">
+        <label for="car_id">车号:</label>
+        <select class="form-control" name="car_id" id="car_id">
+            <option value="" selected>请选择车号</option>
+            {% for car in car_list %}
+                <option value="{{ car.id }}">{{ car.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    {% for field in informantion_form %}
+        <div class="form-group col-sm-10">
+            <label for="">{{ field.label }}</label>
+            {{ field }}
+            <span class="error" style="color: red;">{{ field.errors.0 }}</span>
+        </div>
+    {% endfor %}
+
+    <div class="form-group col-sm-10">
+        <button class="btn btn-success pull-right">提交</button>
+    </div>
+</form>
+<script src="/static/js/jquery-3.3.1.js"></script>
+<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+<script src="/static/bootstrap/js/bootstrap-select.js"></script>
+<script src="/static/bootstrap/js/defaults-zh_CN.js"></script>
+<script>
+    //点击input框,消除错误提示
+    $("form input").click(function () {
+        $(".error").text("");
+    });
+    //改变select框时,消除span中错误提示
+    $("form select").change(function () {
+        $(".error").text("");
+    });
+    $("#id_customer").change(function () {
+        $("#petrolstation").empty().append('<option value="">---------</option>');
+        //ajax请求
+        $.ajax({
+            url: '/getpetrolstation/',
+            type: 'get',
+            data: {
+                customer_id: $(this).val()
+            },
+            success: function (data) {
+                $.each(data, function (index, petrolstation_dict) {
+                    var s = '<option>' + petrolstation_dict.name + '</option>';
+                    $("#petrolstation").append(s);
+                })
+            }
+        })
+    });
+
+    $
+</script>
+</body>
+</html>

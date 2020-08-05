@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% block treeview5 %}
+    active
+{% endblock %}
+{% block orderstatistics %}
+    class="active"
+{% endblock %}
+{% block content %}
+    <div class="content-wrapper small">
+        <section class="content-header">
+            <h3>客户成单量统计</h3>
+            <hr>
+            <a type="button" class="btn btn-primary" href="?date=today">今天</a>
+            <a type="button" class="btn btn-warning" href="?date=yesterday">昨天</a>
+            <a type="button" class="btn btn-danger" href="?date=week">最近一周</a>
+            <a type="button" class="btn btn-info" href="?date=month">最近一个月</a>
+        </section>
+
+        <!-- action批量处理的form表单  -->
+        <form action="" method="post">
+            {% csrf_token %}
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="box-title">
+                                    {{ content }}
+                                </h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <div id="container" style="min-width:400px;height:400px"></div>
+                                <hr style="height:1px;border:none;border-top:1px solid #555555;"/>
+                                <table id="example2" class="text-center table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th class="text-center">编号</th>
+                                        <th class="text-center">车号</th>
+                                        <th class="text-center">配送时间</th>
+                                        <th class="text-center">驾驶员</th>
+                                        <th class="text-center">发货单位</th>
+                                        <th class="text-center">发货地址</th>
+                                        <th class="text-center">收货单位</th>
+                                        <th class="text-center">油品</th>
+                                        <th class="text-center">实收数</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    {% for information in information_list %}
+                                        <tr>
+                                            <td>{{ forloop.counter }}</td>
+                                            <td>{{ information.car.name }}</td>
+                                            <td>{{ information.deliver_time }}</td>
+                                            <td>{{ information.car.driver }}</td>
+                                            <td>{{ information.customer.name }}</td>
+                                            <td>{{ information.oilwarehouse.name }}</td>
+                                            <td>{{ information.petrolstation.name }}</td>
+                                            <td>{{ information.oil.name }}</td>
+                                            <td>{{ information.paid_in_number }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </form>
+    </div>
+{% endblock %}
+
+{% block highcharts %}
+    <script src="/static/highcharts/highcharts.js"></script>
+    <script>
+        var chart = Highcharts.chart('container', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: '统计成单量'
+            },
+            subtitle: {
+                text: '数据截止 {{ today }}'
+            },
+            xAxis: {
+                type: 'category',
+                labels: {
+                    rotation: -45  // 设置轴标签旋转角度
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '成单数'
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            tooltip: {
+                pointFormat: '成单数: <b>{point.y} 个</b>',
+            },
+            series: [{
+                name: '总人口',
+                //传入动态数据
+                data: {{ ret|safe }},
+                dataLabels: {
+                    enabled: true,
+                    rotation: -0,
+                    color: 'red',
+                    align: 'center',
+                    format: '{point.y}', // :.1f 为保留 1 位小数
+                    y: 10,
+                }
+            }]
+        });
+
+
+    </script>
+
+{% endblock %}

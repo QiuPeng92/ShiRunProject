@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    {#    <link rel="icon" href="https://v3.bootcss.com/favicon.ico">#}
+    {% load staticfiles %}
+    <link rel="icon" href="{% static "image/2.ico" %}" type="image/x-icon">
+    <title>施润集团</title>
+    {% load static %}
+    <!-- Bootstrap core CSS -->
+    <link href="{% static "bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static "dashboard.css" %}" rel="stylesheet">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-select.min.css">
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-header">
+                    <img alt="Brand" src="{% static "image/2.ico" %}">
+                    <h4>施润集团油料配送管理系统---已填写信息查询 </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>编号</th>
+        <th>车号</th>
+        <th>车次</th>
+        <th>车舱</th>
+        <th>油库</th>
+        <th>加油站</th>
+        <th>油品</th>
+        <th>实收数</th>
+    </tr>
+    </thead>
+    <tbody>
+    {#  如果取不到information_list,就显示"暂无"  #}
+    {% if information_list %}
+        {% for information in information_list %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ information.car__name }}</td>
+                <td>{{ information.drive_number }}</td>
+                <td>{{ information.cabin }}</td>
+                <td>{{ information.oilwarehouse__name }}</td>
+                <td>{{ information.petrolstation__name }}</td>
+                <td>{{ information.oil__name }}</td>
+                <td>{{ information.paid_in_number }}</td>
+            </tr>
+        {% endfor %}
+    {% else %}
+        <tr>
+            <td>暂无</td>
+            <td>暂无</td>
+            <td>暂无</td>
+            <td>暂无</td>
+            <td>暂无</td>
+            <td>暂无</td>
+            <td>暂无</td>
+            <td>暂无</td>
+        </tr>
+    {% endif %}
+    </tbody>
+</table>
+<div class="form-group col-sm-10 pull-right">
+    <label for="">是否返回填写送货单?</label>
+    <a class="btn btn-danger" href="/phone/index/">返回</a>
+</div>
+
+<script src="/static/js/jquery-3.3.1.js"></script>
+<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+<script src="/static/bootstrap/js/bootstrap-select.js"></script>
+<script src="/static/bootstrap/js/defaults-zh_CN.js"></script>
+</body>
+</html>

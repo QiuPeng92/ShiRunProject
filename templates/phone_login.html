@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    {#    <link rel="icon" href="https://v3.bootcss.com/favicon.ico">#}
+    {% load staticfiles %}
+    <link rel="icon" href="{% static "image/2.ico" %}" type="image/x-icon">
+    <title>施润集团</title>
+    {% load static %}
+    <!-- Bootstrap core CSS -->
+    <link href="{% static "bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static "dashboard.css" %}" rel="stylesheet">
+    <link href="{% static "font-awesome-4.7.0/css/font-awesome.min.css" %}" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-header">
+                    <img alt="Brand" src="{% static "image/2.ico" %}">
+                    <h4>施润集团油料配送管理系统---登录界面 </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<form action="{% url 'phone_login' %}" method="post">
+    {% csrf_token %}
+    <div class="form-group col-sm-10">
+        <label for="username">用户名</label>
+        <input type="text" class="form-control" id="username" placeholder="用户名">
+    </div>
+    <div class="form-group col-sm-10">
+        <label for="password">密码</label>
+        <input type="password" class="form-control" id="password" placeholder="密码">
+    </div>
+    <div class="form-group col-sm-10">
+        <span class="error"></span>
+    </div>
+    <div class="form-group col-sm-10">
+        <div>
+            <a type="button" class="btn btn-success login_btn" id="login-button">登录</a>
+            <span class="login-error"></span>
+        </div>
+
+    </div>
+</form>
+
+<!-- jQuery 2.2.0 -->
+<script src="/static/AdminLTE-2.3.3/plugins/jQuery/jQuery-2.2.0.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="/static/AdminLTE-2.3.3/bootstrap/js/bootstrap.min.js"></script>
+<!-- iCheck -->
+<script src="/static/AdminLTE-2.3.3/plugins/iCheck/icheck.min.js"></script>
+<script>
+    $(".login_btn").click(function () {
+        $.ajax({
+            url: "",  //url不填就是原路径
+            type: "post",  //post请求
+            data: {
+                username: $("#username").val(),
+                password: $("#password").val(),
+                csrfmiddlewaretoken: $("[name='csrfmiddlewaretoken']").val(),
+            },
+            success: function (response) {
+                //如果response.user有值,登录成功
+                if (response.user) {
+                    console.log(response.user);
+                    //登录成功
+                    //如果获取不到next的url，则跳转到index
+                    location.href = "{% url 'phone_index' %}"
+                } else {
+                    //登录失败
+                    $(".error").html(response.err_msg).css("color", "red")
+                }
+            }
+        })
+    })
+
+</script>
+</body>
+</html>

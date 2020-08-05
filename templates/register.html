@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AdminLTE 2 | Registration Page</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="/static/AdminLTE-2.3.3/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/static/AdminLTE-2.3.3/dist/css/AdminLTE.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="/static/AdminLTE-2.3.3/plugins/iCheck/square/blue.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition register-page">
+<div class="register-box">
+    <div class="register-logo">
+        <a href="/index/"><b>施润集团物流系统</b></a>
+    </div>
+
+    <div class="register-box-body">
+        <p class="login-box-msg">注册账号</p>
+        {# 关闭form表单浏览器的效验 ,利用form表单传文件,需要设置enctype="multipart/form-data" 参数#}
+        <form action="/register/" method="post" enctype="multipart/form-data" novalidate>
+            {# 加入csrftoken效验 #}
+            {% csrf_token %}
+            {# 头像框 #}
+            <div class="form-group has-feedback">
+                <label for="id_avatar"><img id="avatar_img" src="/static/image/default.png" alt="" width="70px" height="70px"></label>
+                <input type="file" name="avatar" id="id_avatar" style="display: none">
+            </div>
+            {# username框 #}
+            <div>
+                <div><span class="span_error" style="color:red">{{ form_obj.username.errors.0 }}</span></div>
+                <div class="form-group has-feedback">
+                    {# 获取form表单的username字段的input框#}
+                    {{ form_obj.username }}
+                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                </div>
+            </div>
+            {# email框 #}
+            <div>
+                <div><span class="span_error" style="color:red">{{ form_obj.email.errors.0 }}</span></div>
+                <div class="form-group has-feedback">
+                    {{ form_obj.email }}
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+            </div>
+            {# password框 #}
+            <div>
+                <div><span class="span_error" style="color:red">{{ form_obj.password.errors.0 }}</span></div>
+                <div class="form-group has-feedback">
+                    {{ form_obj.password }}
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+            </div>
+
+            {# re_password框 #}
+            <div>
+                <div><span class="span_error" style="color:red">{{ form_obj.re_password.errors.0 }}</span></div>
+                <div class="form-group has-feedback">
+                    {{ form_obj.re_password }}
+                    <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <!-- /.col -->
+                <div class="col-xs-4 pull-right">
+                    <button type="button" class="btn btn-primary btn-block btn-flat" id="reg_submit">注册</button>
+                </div>
+                <!-- /.col -->
+            </div>
+        </form>
+    </div>
+    <!-- /.form-box -->
+</div>
+<!-- /.register-box -->
+
+<!-- jQuery 2.2.0 -->
+<script src="/static/AdminLTE-2.3.3/plugins/jQuery/jQuery-2.2.0.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="/static/AdminLTE-2.3.3/bootstrap/js/bootstrap.min.js"></script>
+<!-- iCheck -->
+<script src="/static/AdminLTE-2.3.3/plugins/iCheck/icheck.min.js"></script>
+<script>
+    //找到头像input标签,绑定change事件
+    $("#id_avatar").change(function () {
+        //1.创建一个读取文件的对象
+        var fileReader = new FileReader();
+        //2.取到当前选中的头像文件
+        console.log(this.files[0]);
+        //3.读取你选中的那个文件
+        fileReader.readAsDataURL(this.files[0]); //读取文件是需要时间的
+        fileReader.onload = function () {
+            //4.等上一步读取完文件后,再把图片加载到img标签中
+            $("#avatar_img").attr("src", fileReader.result);
+        };
+    });
+
+    //AJAX提交注册的数据
+    $("#reg_submit").click(function () {
+        //取到用户填写的注册数据,向后端发送Ajax请求
+        //var username = $("#id_username").val();
+        //var password = $("#id_password").val();
+        //var re_password = $("#id_re_password").val();
+        //var email = $("#id_email").val();
+        //创建一个对象用于上传文件
+        var formData = new FormData();
+        formData.append("username", $("#id_username").val());
+        formData.append("password", $("#id_password").val());
+        formData.append("re_password", $("#id_re_password").val());
+        formData.append("email", $("#id_email").val());
+        formData.append("avatar", $("#id_avatar")[0].files[0]);
+        formData.append("csrfmiddlewaretoken", $("[name='csrfmiddlewaretoken']").val());
+
+        $.ajax({
+            url: "/register/",
+            type: "post",
+            //使用ajax传文件,需要将processData与contentType两个参 数
+            processData: false,
+            contentType: false,
+            data: formData,
+
+            //不包括上传文件
+            //data: {
+            //  username: username,
+            //password: password,
+            //re_password: re_password,
+            //email: email,
+            //csrfmiddlewaretoken: $("[name='csrfmiddlewaretoken']").val(),
+            //},
+
+            success: function (data) {
+                //如果status=1,则有错误
+                if (data.status) {
+                    //有错误就展示错误(循环data.msg对象的键值对)
+                    $.each(data.msg, function (k, v) {
+                        $("#id_" + k).addClass("is-invalid").parent().prev("div").children("span").text(v[0]);
+                    })
+                } else {
+                    //没有错误就跳转到指定页面(status=0)
+                    location.href = data.msg;
+                }
+            }
+        })
+    });
+    //将所有的input框绑定点击的事件,将所有的错误的信息和红框移除
+    $("form input").click(function () {
+        $(".span_error").text("").parent().next().children("input").removeClass("is-invalid");
+    })
+</script>
+</body>
+</html>

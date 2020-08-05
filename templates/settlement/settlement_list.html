@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% block treeview2 %}
+    active
+{% endblock %}
+
+{% block settlement_active %}
+    class="active"
+{% endblock %}
+{% block content %}
+    <div class="content-wrapper small">
+        <section class="content-header">
+
+            <h1>
+                结算运费列表
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="/"><i class="fa fa-th-list"></i> 首页</a></li>
+                <li><a href="{% url 'settlement_list' %}">结算运费列表</a></li>
+            </ol>
+            <!-- 模糊查询的form表单  -->
+            <form action="" method="get" class="pull-right">
+                <ol class="breadcrumb">
+
+                    <select name="field" id="s1" class="form-control" style="display: inline-block;width: 110px">
+                        <option value="deliver_time">配送时间</option>
+                        <option value="car_name">车号</option>
+                        <option value="outside_number">外部编号</option>
+                        <option value="inside_number">内部编号</option>
+                        <option value="driver_name">驾驶员</option>
+                        <option value="supercargo_name">押运员</option>
+                        <option value="customer_name">发货单位</option>
+                    </select>
+                    <input class="form-control" style="display: inline-block;width: 200px" type="text" name="q"
+                           placeholder="搜索">
+                    <button style="vertical-align: 0px" class="btn btn-success">搜索</button>
+                </ol>
+            </form>
+
+
+        </section>
+
+        <!-- action批量处理的form表单  -->
+        <form action="" method="post">
+            {% csrf_token %}
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="box">
+                            <div class="box-header">
+                                <div class="col-md-2 pull-right">
+                                    <a href="/export_settlement/?field={{ field }}&q={{ q }}"
+                                       class="btn btn-info pull-right"><i
+                                            class="fa fa-file-excel-o"
+                                            aria-hidden="true"></i> 导出Excel
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <table id="example2" class="text-center table table-bordered table-hover">
+                                    <thead>
+                                    <tr class="danger">
+                                        <th>编号</th>
+                                        <th>内部编号</th>
+                                        <th>外部编号</th>
+                                        <th>发货单位</th>
+                                        <th>配送时间</th>
+                                        <th>车号</th>
+                                        <th>驾驶员</th>
+                                        <th>押运员</th>
+                                        <th>发货油库</th>
+                                        <th>收货单位</th>
+                                        <th>油品</th>
+                                        <th>车次</th>
+                                        <th>车舱编号</th>
+                                        <th>支付金额</th>
+                                        <th>实发量</th>
+                                        <th>客户运距</th>
+                                        <th>短程标准</th>
+                                        <th>短程单价</th>
+                                        <th>长程单价</th>
+                                        <th>短途运费</th>
+                                        <th>长途运费</th>
+                                        <th>备注</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    {% for staticinformation in staticinformation_list %}
+                                        <tr>
+                                            <td>{{ forloop.counter }}</td>
+                                            <td>{{ staticinformation.inside_number|default:"暂无" }}</td>
+                                            <td>{{ staticinformation.outside_number|default:"暂无" }}</td>
+                                            <td>{{ staticinformation.customer_name }}</td>
+                                            <td>{{ staticinformation.deliver_time |date:"Y-m-d" }}</td>
+                                            <td>{{ staticinformation.car_name }}</td>
+                                            <td>{{ staticinformation.driver }}</td>
+                                            <td>{{ staticinformation.supercargo }}</td>
+                                            <td>{{ staticinformation.oilwarehouse }}</td>
+                                            <td>{{ staticinformation.petrolstation }}</td>
+                                            <td>{{ staticinformation.oil }}</td>
+                                            <td>{{ staticinformation.drive_number }}</td>
+                                            <td>{{ staticinformation.cabin }}</td>
+                                            <td>{{ staticinformation.price|default:"暂无" }}</td>
+                                            <td>{{ staticinformation.paid_in_number }}</td>
+                                            {# 客户里程 #}
+                                            <td>{{ staticinformation.customer_mileage }}</td>
+                                            <td>{{ staticinformation.shortmileage_standard }}</td>
+                                            <td>{{ staticinformation.shortmileage_price }}</td>
+                                            <td>{{ staticinformation.longmileage_price }}</td>
+                                            <td>{{ staticinformation.short_price }}</td>
+                                            <td>{{ staticinformation.long_price }}</td>
+                                            <td>{{ staticinformation.remark|default:"暂无" }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+
+
+                                <nav aria-label="Page navigation" class="pull-right">
+                                    <ul class="pagination">
+                                        {{ pagination.page_html|safe }}
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </form>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+
+{% block petrolstation2oilwarehouse_active %}
+    class = "active"
+{% endblock %}
+{% block treeview %}
+    active
+{% endblock %}
+{% block content %}
+    <div class="content-wrapper small">
+        <section class="content-header">
+            <h1>
+                加油站油库里程列表
+                <small>(注: 加油站和油库里程需一一对应,否则会报错!)</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="/"><i class="fa fa-th-list"></i> 首页</a></li>
+                <li><a>加油站油库里程列表</a></li>
+            </ol>
+            <!-- 模糊查询的form表单  -->
+            <form action="" method="get" class="pull-right">
+                <ol class="breadcrumb">
+
+                    <select name="field" id="s1" class="form-control" style="display: inline-block;width: 130px">
+                        <option value="petrolstation">加油站名称</option>
+                        <option value="oilwarehouse">油库名称</option>
+                    </select>
+                    <input class="form-control" style="display: inline-block;width: 200px" type="text" name="q"
+                           placeholder="搜索">
+                    <button style="vertical-align: 0px" class="btn btn-success">搜索</button>
+                </ol>
+            </form>
+
+
+        </section>
+
+        <!-- action批量处理的form表单  -->
+        <form action="" method="post">
+            {% csrf_token %}
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="box-title"><a href="{% url 'petrolstation2oilwarehouse_add' %}"
+                                                         class="btn btn-primary btn-sm">添加加油站油库里程</a>
+                                </h3>
+                                <div class="col-md-2 pull-right">
+                                    <a href="/export_petrolstation2oilwarehouse/"
+                                       class="btn btn-info pull-right"><i
+                                            class="fa fa-file-excel-o"
+                                            aria-hidden="true"></i> 导出Excel
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <table id="example2" class="text-center table table-bordered table-hover">
+                                    <thead>
+                                    <tr class="danger">
+                                        <th>编号</th>
+                                        <th>员工里程</th>
+                                        <th>客户里程</th>
+                                        <th>油库</th>
+                                        <th>加油站</th>
+                                        <th>备注</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    {% for petrolstation2oilwarehouse in petrolstation2oilwarehouse_list %}
+                                        <tr>
+                                            <td>{{ forloop.counter }}</td>
+                                            <td>{{ petrolstation2oilwarehouse.mileage }}</td>
+                                            <td>{{ petrolstation2oilwarehouse.customer_mileage }}</td>
+                                            <td>{{ petrolstation2oilwarehouse.oilwarehouse.name }}</td>
+                                            <td>{{ petrolstation2oilwarehouse.petrolstation.name }}</td>
+                                            <td>{{ petrolstation2oilwarehouse.remark|default:"暂无备注" }}</td>
+                                            <td>
+                                                <a href="{% url 'petrolstation2oilwarehouse_edit' petrolstation2oilwarehouse.pk %}?page={{ page_num }}"
+                                                ><i class="fa fa-edit fa-lg" aria-hidden="true"></i></a>&nbsp;|&nbsp;
+                                                <a href="" data-toggle="modal"
+                                                   data-target="#myModal{{ petrolstation2oilwarehouse.pk }}"><i
+                                                        class="fa fa-trash-o fa-lg"></i></a>
+                                                <!-- 模态框 -->
+                                                <div class="modal fade" id="myModal{{ petrolstation2oilwarehouse.pk }}"
+                                                     tabindex="-1"
+                                                     role="dialog"
+                                                     aria-labelledby="myModalLabel">
+                                                    <div class="modal-dialog modal-sm" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                                <h4 class="modal-title" id="myModalLabel">确认删除?</h4>
+                                                            </div>
+                                                            <div class="modal-body">
+
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-default"
+                                                                        data-dismiss="modal">关闭
+                                                                </button>
+                                                                <a type="button" class="btn btn-primary"
+                                                                   href="{% url 'petrolstation2oilwarehouse_delete' petrolstation2oilwarehouse.id %}?page={{ page_num }}">确认
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                    {% endfor %}
+
+
+                                    </tbody>
+                                </table>
+                                <nav aria-label="Page navigation" class="pull-right">
+                                    <ul class="pagination">
+                                        {{ pagination.page_html|safe }}
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </form>
+    </div>
+{% endblock %}
+

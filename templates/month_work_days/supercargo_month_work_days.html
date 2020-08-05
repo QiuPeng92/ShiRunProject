@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block treeview2 %}
+    active
+{% endblock %}
+
+{% block supercargo_month_work_days %}
+    class="active"
+{% endblock %}
+{% block content %}
+    {% load extra_tags %}
+    <div class="content-wrapper small">
+        <section class="content-header">
+            <h1>
+                押运员每月上班天数
+            </h1>
+            <hr>
+            <ol class="breadcrumb">
+                <li><a href="/"><i class="fa fa-th-list"></i> 首页</a></li>
+                <li><a>押运员每月上班天数</a></li>
+            </ol>
+            <!-- 模糊查询的form表单  -->
+            <form action="" method="get" class="pull-right">
+                <ol class="breadcrumb">
+
+                    <select name="field" id="s1" class="form-control" style="display: inline-block;width: 110px">
+                        <option value="deliver_year">配送年份</option>
+                        <option value="deliver_month">配送月份</option>
+                        <option value="supercargo_name">押运员</option>
+                    </select>
+                    <input class="form-control" style="display: inline-block;width: 200px" type="text" name="q"
+                           placeholder="搜索">
+                    <button style="vertical-align: 0px" class="btn btn-success">搜索</button>
+                </ol>
+            </form>
+
+
+        </section>
+
+        <!-- action批量处理的form表单  -->
+        <form action="" method="post">
+            {% csrf_token %}
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="box">
+                            <div class="box-header">
+                                <div class="col-md-2 pull-right">
+                                    <a href="/export_supercargo_month_work_days/?field={{ field }}&q={{ q }}"
+                                       class="btn btn-info pull-right"><i
+                                            class="fa fa-file-excel-o"
+                                            aria-hidden="true"></i> 导出Excel
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <table id="example2" class="text-center table table-bordered table-hover">
+                                    <thead>
+                                    <tr class="danger">
+                                        <th>编号</th>
+                                        <th>押运员</th>
+                                        <th>配送年份</th>
+                                        <th>配送月份</th>
+                                        <th>上班天数汇总(每月)</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for k,v in a.items %}
+                                        <tr>
+                                            <td>{{ forloop.counter }}</td>
+                                            <td>{{ k.0 }}</td>
+                                            <td>{{ k.1 }}</td>
+                                            <td>{{ k.2 }}</td>
+                                            <td>{{ v }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+
+
+                                <nav aria-label="Page navigation" class="pull-right">
+                                    <ul class="pagination">
+                                        {{ pagination.page_html|safe }}
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </form>
+    </div>
+{% endblock %}
+
